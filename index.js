@@ -91,9 +91,25 @@ function caesarCipher(string, shift) {
   return resultArray.join("");
 }
 
+function analyzeArray(arr) {
+  let ascend = arr.sort((a, b) => a - b);
+
+  let sum = ascend.reduce((acc, num) => {
+      return (acc + num); 
+    }); 
+
+  return {
+    average: sum / ascend.length,
+    min: ascend[0],
+    max: ascend[ascend.length - 1],
+    length: ascend.length,
+  };
+}
+
 module.exports = {
   capitalize,
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 };

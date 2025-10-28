@@ -43,5 +43,14 @@ it("encrypts messages by using a shift factor", () => {
 });
 
 it("encrypts messages by using a shift factor", () => {
-  expect(expo.caesarCipher('Hello, World!', 3)).toBe("Khoor, Zruog!");
-}); 
+  expect(expo.caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
+
+it("takes an array of numbers and returns an object with the average, min, max, and length.", () => {
+  expect(expo.analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
